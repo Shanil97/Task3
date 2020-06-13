@@ -10,8 +10,6 @@ public class Main {
 		try {
 			Class<?> clazz = Rectangle.class;
 			rectangle = (Rectangle) clazz.getConstructor().newInstance();
-			//Get the super class's name field.
-			//Set the value "Rectangle" to name field.
 			Field field =clazz.getSuperclass().getDeclaredField("name");
 			field.setAccessible(true);
 			field.set(rectangle,"Rectangle");
